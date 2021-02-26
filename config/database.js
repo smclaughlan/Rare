@@ -13,9 +13,15 @@ module.exports = {
     database,
     host,
     dialect: "postgres",
+    // "dialectOptions": {
+    //   "ssl": true
+    // }
   },
   production: {
     use_env_variable: 'DATABASE_URL',
+    "dialectOptions": {
+      "ssl": true
+    }
   },
   test: {
     dialect: "sqlite",

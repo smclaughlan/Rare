@@ -19,9 +19,9 @@ module.exports = {
   },
   production: {
     use_env_variable: 'DATABASE_URL',
-    "dialectOptions": {
-      "ssl": true
-    }
+    // "dialectOptions": {
+    //   "ssl": true
+    // }
   },
   test: {
     dialect: "sqlite",

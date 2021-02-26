@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const morgan = require('morgan');
 const path = require('path');
+const cors = require('cors');
 
 const userRoute = require('./routes/user');
 const indexRoute = require('./routes/index');
@@ -43,6 +44,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 // app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.set('view engine', 'pug');
 
 app.use('/register', registerRoute);
